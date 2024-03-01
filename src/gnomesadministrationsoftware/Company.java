@@ -19,6 +19,21 @@ public class Company {
         this.staff = staff;
     }
     
+    //Overloaded constructor to get a name as a parameter
+    public Company(String name) {
+        this.companyName = name;
+        this.staff = new ArrayList<>();
+    }
     
+    // Method created to add a new employee to the ArrayList
+    public void addNewStaff(Employee employee) {
+        staff.add(employee);
+    }
     
+    // Method created to get the number of employee in the ArrayLIst
+    public int getStaffNumber() {
+        return staff.size();
+    }
+    
+   
 }
