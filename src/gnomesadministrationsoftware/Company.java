@@ -10,4 +10,15 @@ package gnomesadministrationsoftware;
  */
 public class Company {
     
+    private String companyName;
+    private ArrayList<Employee> staff;
+
+    //Constructor for the company 
+    public Company() {
+        this.companyName = companyName;
+        this.staff = staff;
+    }
+    
+    
+    
 }
