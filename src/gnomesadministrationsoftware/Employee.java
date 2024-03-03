@@ -20,8 +20,7 @@ public class Employee {
         // Will initialize with default values
         this.name = "Name";
         this.email = "Default@gnomes.com";
-        //nextempNum++ will auto increment to ensure a unique employee
-        this.empNum = nextEmpNum++;
+        
     }
     
     // Parametrized contructor with email validation
