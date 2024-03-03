@@ -6,8 +6,9 @@ package gnomesadministrationsoftware;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
 /**
- * 
+ *
  * @author peuvi
  */
 //https://github.com/Pedrovns1/GnomesAdministrationSoftware
@@ -45,7 +46,6 @@ public class EmployeeTest {
             company.addNewStaff(emp);
         }
 
-      
         // This will call the method that initiates the manager's menu
         GnomesAdministrationSoftware.startMenu(manager, company);
     }

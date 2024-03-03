@@ -7,11 +7,13 @@ package gnomesadministrationsoftware;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
+
 /**
  *
  * @author peuvi
  */
 public class GnomesAdministrationSoftware {
+
     // Constants for valid username and password to give access
     private static final String USERNAME = "Gnomeo";
     private static final String PASSWORD = "smurf";
@@ -20,7 +22,7 @@ public class GnomesAdministrationSoftware {
     private static boolean isAuthenticated(Manager manager, String enteredUsername, String enteredPassword) {
         return manager.getUsername().equals(enteredUsername) && manager.getPassword().equals(enteredPassword);
     }
-    
+
     // Method to display menu options for the manager     
     private static void displayMenu() {
         System.out.println("Enter your choice:");
@@ -29,6 +31,7 @@ public class GnomesAdministrationSoftware {
         System.out.println("3. Remove staff");
         System.out.println("4. Logout");
     }
+
     // Method to execute the manager menu and get their options
     public static void executeMenu(Company company, Manager manager, Scanner scanner) {
         int choice;
@@ -36,7 +39,7 @@ public class GnomesAdministrationSoftware {
             displayMenu();
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
             switch (choice) {
                 case 1:
                     viewCurrentStaff(company);
@@ -55,11 +58,12 @@ public class GnomesAdministrationSoftware {
             }
         } while (choice != 4);
     }
+
     // Method to view the current staffs in the system
     private static void viewCurrentStaff(Company company) {
         System.out.println("Current Staff:");
         for (Employee employee : company.getStaff()) {
-            System.out.println("Employee name: " + employee.getName()+ "\nEmployee Number:" + employee.getempNum());
+            System.out.println("Employee name: " + employee.getName() + "\nEmployee Number:" + employee.getempNum());
         }
     }
 
@@ -73,6 +77,7 @@ public class GnomesAdministrationSoftware {
         company.addNewStaff(newEmployee);
         System.out.println("New staff added successfully.");
     }
+
     //Method to remove staffs from the system
     private static void removeStaff(Company company, Scanner scanner) {
         System.out.print("Enter empNum of the employee to remove: ");
@@ -83,7 +88,7 @@ public class GnomesAdministrationSoftware {
     // Method tha will inicialize the manager's menu and get the username and password to validat the login
     public static void startMenu(Manager manager, Company company) {
         System.out.println("Welcome to the Manager Console Menu");
-        try (Scanner scanner = new Scanner(System.in)) {
+        try ( Scanner scanner = new Scanner(System.in)) {
             // Prompt for username and password
             System.out.print("Enter username: ");
             String enteredUsername = scanner.nextLine();

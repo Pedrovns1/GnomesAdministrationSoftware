@@ -8,7 +8,6 @@ package gnomesadministrationsoftware;
  *
  * @author peuvi
  */
-
 // Manager class extends the functionality of the Employee class
 public class Manager extends Employee {
 
@@ -18,7 +17,7 @@ public class Manager extends Employee {
     // Constructor for Manager with default values
     public Manager() {
         // Call the default constructor in the Employee class to ensure it initializes first
-        super(); 
+        super();
         this.username = "Gnomeo";
         this.password = "smurf";
     }

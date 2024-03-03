@@ -37,12 +37,12 @@ public class Company {
     public int getStaffNumber() {
         return staff.size();
     }
-    
+
     // Method to get a staff in the ArrayList
     public ArrayList<Employee> getStaff() {
         return staff;
     }
-    
+
     //Method to display employees whose employee numbers are greater than the provided parameter.
     public void listEmployees(int employeeNumber) {
         Iterator<Employee> iterator = staff.iterator();
@@ -53,7 +53,7 @@ public class Company {
             }
         }
     }
-    
+
     // Method to remove the employee  from the ArrayList using the empNum as parameter
     public void removeStaff(int empNum) {
         Iterator<Employee> iterator = staff.iterator();
@@ -68,5 +68,5 @@ public class Company {
         //Message if the employee is not found based on the provided empNum
         System.out.println("Employee with empNum " + empNum + " not found.");
     }
-    
+
 }
