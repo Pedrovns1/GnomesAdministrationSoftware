@@ -28,13 +28,13 @@ public class Employee {
         this.name = name;
         
         // Validate email using Emailvalidation class
-        if (EmailValidation.isValidEmail(email)){
+        if (EmailValidation.isValidEmail(email) && email.length() > 3 ){
         this.email=email;
         }else{
-            // If the email is invalid this will ensure that the default email will be implemented
-            System.out.println("Invalid email. Setting default email");
+            // If the email is invalid or doesn't meet the length requirement, the default email will be implemented
+            System.out.println("Invalid email or email length. Setting default email");
             System.out.println("Please change this default email to a valid one");
-            this.email = email;
+            this.email = "Default@gnomes.com";
         }
         // Initialize empNum with the next available employee number
         this.empNum = nextEmpNum++;

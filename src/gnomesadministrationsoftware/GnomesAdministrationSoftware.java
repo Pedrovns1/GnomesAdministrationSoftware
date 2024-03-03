@@ -29,7 +29,7 @@ public class GnomesAdministrationSoftware {
         System.out.println("3. Remove staff");
         System.out.println("4. Logout");
     }
-
+    // Method to execute the manager menu and get their options
     public static void executeMenu(Company company, Manager manager, Scanner scanner) {
         int choice;
         do {
@@ -55,7 +55,7 @@ public class GnomesAdministrationSoftware {
             }
         } while (choice != 4);
     }
-
+    // Method to view the current staffs in the system
     private static void viewCurrentStaff(Company company) {
         System.out.println("Current Staff:");
         for (Employee employee : company.getStaff()) {
